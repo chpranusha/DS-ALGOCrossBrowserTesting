@@ -2,8 +2,6 @@ package com.utils;
 
 import java.time.Duration;
 
-//import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,9 +17,12 @@ public class Helper {
     
     public WebDriver initializeDrivers(String browser) {
 
+    	
     	 if (browser.equalsIgnoreCase("chrome")) {
 			Loggerload.info("Testing on chrome");
-			WebDriverManager.chromedriver().browserVersion("108.0.0").setup();
+			//WebDriverManager.chromedriver().browserVersion("108.0.0").setup();
+			WebDriverManager.chromedriver().setup(); //setting up and initializing webdriver
+			System.setProperty("webdriver.http.factory","jdk-http-client");
 			driver = new ChromeDriver();
 
 		} 

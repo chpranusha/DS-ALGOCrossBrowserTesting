@@ -29,8 +29,5 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		ConfigReader.loadConfig();
 		ConfigReader.setBrowserType(browser);
 		System.out.println(" in runner " + browser);
-
-}
-	
-
+	}
 }
